@@ -29,19 +29,20 @@ To contribute, ensure you have the following installed on your machine:
 ### Setting Up
 
 1. Clone the repository:
-   ```bash
+   ```sh
    git clone https://github.com/your-username/rust-web-server-project.git
    cd rust-web-server-project
    ```
 
 	2.	Install dependencies:
-  ```bash
+
+  ```sh
   cargo build
   ```
 
-
 	3.	Run the server:
-  ```bash
+
+  ```sh
   cargo run
   ```
 
@@ -49,7 +50,7 @@ To contribute, ensure you have the following installed on your machine:
 Project Structure
 
 The project structure is organized as follows:
-  ```bash
+  ```sh
   /src                  // Main project source code
   /tests                // Unit and integration tests
   /Cargo.toml           // Rust project manifest
@@ -64,12 +65,9 @@ Contribution Guidelines
 	2.	No AI Tools Allowed: This is an educational project, so we ask that contributors do not use any AI-powered code generation tools (e.g., GitHub Copilot, ChatGPT). Writing and debugging the code yourself is crucial to learning. If you hit a roadblock, refer to the official documentation, our discussion channels, or ask for help from the team.
 	3.	Branching Workflow: We are using a branch-based workflow for collaboration. Here’s how to contribute:
 	•	Create a new branch for each feature or bugfix:
-
-git checkout -b feature-name
-
-
 	•	Once the feature is complete, push your branch:
-  ```bash
+
+  ```sh
   git push origin feature-name
   ```
 
