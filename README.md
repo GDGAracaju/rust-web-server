@@ -1,5 +1,3 @@
-Sure! Here’s the markdown version of the README text:
-
 # Collaborative Rust Web Server Project - README
 
 Welcome to the **Rust Web Server Project**! This project is focused on building a fully functional web server using the Rust programming language. Our aim is to work together as a team, learn from each other, and deepen our understanding of web development in Rust.
