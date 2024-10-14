@@ -108,5 +108,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 We’re excited to have you on board and look forward to building this Rust web server together! Let’s make the most of this learning opportunity and grow as developers.
 
 Happy coding! 🚀
-
-You can copy and paste this markdown into your `README.md` file.
