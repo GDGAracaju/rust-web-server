@@ -1,19 +1,19 @@
-use std::convert::Infallible;
-use hyper::{Request, Response};
 use http_body_util::Full;
 use hyper::body::Bytes;
-use std::net::SocketAddr;
 use hyper::server::conn::http1;
 use hyper::service::service_fn;
+use hyper::{Request, Response};
 use hyper_util::rt::TokioIo;
+use std::convert::Infallible;
+use std::net::SocketAddr;
 use tokio::net::TcpListener;
 
-async fn hello(_:Request<hyper::body::Incoming>) -> Result<Response<Full<Bytes>>, Infallible> {
+async fn hello(_: Request<hyper::body::Incoming>) -> Result<Response<Full<Bytes>>, Infallible> {
     Ok(Response::new(Full::new(Bytes::from("Hello World"))))
 }
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-    let add= SocketAddr::from(([127, 0, 0, 1], 3000));
+    let add = SocketAddr::from(([127, 0, 0, 1], 3000));
     let listener = TcpListener::bind(add).await?;
 
     loop {
@@ -21,8 +21,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
         let io = TokioIo::new(stream);
         tokio::task::spawn(async move {
             if let Err(err) = http1::Builder::new()
-            .serve_connection(io, service_fn(hello))
-            .await {
+                .serve_connection(io, service_fn(hello))
+                .await
+            {
                 eprintln!("Error serving connection: {:?}", err);
             }
         });
